@@ -4,7 +4,45 @@
   
     
     <entry>
-      <title>article</title>
+      <title>debounce</title>
+      <link href="posts/dbf34790.html"/>
+      <url>posts/dbf34790.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h2><pre><code class="javascript">const button = document.querySelector('button')    function patMoney() {        console.log('已剁')    }    // 创建一个防抖函数    function debounce(func, delay) {        // 防止在定义监听函数的时候就直接执行了函数 所以我们用到高阶函数        let timer        // 闭包 因为作用域链的关系 所有独立的执行函数都能访问到这个timer变量        return function () {            let context = this            let args = arguments            clearTimeout(timer)            // 设置setTimeout            timer = setTimeout(function () {                func.apply(context, args)            }, delay)        }    }    button.addEventListener('click', debounce(patMoney, 3000))</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> debounce </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>throttle</title>
+      <link href="posts/ebdc48ec.html"/>
+      <url>posts/ebdc48ec.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h2><p>```javascript</p><p>function coloring() {<br>    let r = Math.floor(Math.random() * 255)<br>    let g = Math.floor(Math.random() * 255)<br>    let b = Math.floor(Math.random() * 255)<br>    document.body.style.background = <code>rgb(${r},${g},${b})</code><br>}</p><p>function throttle(func, delay) {<br>    let pre = 0<br>    return function () {<br>        let now = new Date()<br>        let context = this<br>        let args = arguments<br>        if (now - pre &gt; delay) {<br>            func.apply(context, args)<br>            pre = now<br>        }<br>    }<br>}</p><p>window.addEventListener(‘resize’, throttle(coloring, 2000))</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> throttle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Promise</title>
       <link href="posts/23a0e66.html"/>
       <url>posts/23a0e66.html</url>
       

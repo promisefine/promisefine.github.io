@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.luckyzmj.cn/posts/dbf34790.html</loc>
+    
+    <lastmod>2021-07-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.luckyzmj.cn/posts/ebdc48ec.html</loc>
+    
+    <lastmod>2021-07-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.luckyzmj.cn/posts/23a0e66.html</loc>
     
     <lastmod>2021-07-13</lastmod>
@@ -191,7 +205,7 @@
   </url>
   
   <url>
-    <loc>http://www.luckyzmj.cn/List/galleries/%E5%8A%A8%E6%BC%AB%E4%BA%BA%E7%89%A9/index.html</loc>
+    <loc>http://www.luckyzmj.cn/List/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/index.html</loc>
     
     <lastmod>2021-07-12</lastmod>
     
@@ -212,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://www.luckyzmj.cn/List/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/index.html</loc>
+    <loc>http://www.luckyzmj.cn/List/galleries/%E5%8A%A8%E6%BC%AB%E4%BA%BA%E7%89%A9/index.html</loc>
     
     <lastmod>2021-07-12</lastmod>
     
@@ -270,14 +284,7 @@
   </url>
   
   <url>
-    <loc>http://www.luckyzmj.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
-    <lastmod>2021-07-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.luckyzmj.cn/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>http://www.luckyzmj.cn/tags/Promise/</loc>
     <lastmod>2021-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -292,6 +299,34 @@
   
   <url>
     <loc>http://www.luckyzmj.cn/tags/GitHub%E5%9B%BE%E5%BA%8A/</loc>
+    <lastmod>2021-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.luckyzmj.cn/tags/debounce/</loc>
+    <lastmod>2021-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.luckyzmj.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
+    <lastmod>2021-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.luckyzmj.cn/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2021-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.luckyzmj.cn/tags/throttle/</loc>
     <lastmod>2021-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -327,13 +362,6 @@
   
   <url>
     <loc>http://www.luckyzmj.cn/tags/%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88/</loc>
-    <lastmod>2021-07-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.luckyzmj.cn/tags/Promise/</loc>
     <lastmod>2021-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
