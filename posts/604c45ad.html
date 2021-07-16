@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="热血发言, Doney 计算机 网络安全 渗透测试">
+    <meta name="keywords" content="前端性能优化, Doney 计算机 网络安全 渗透测试">
     <meta name="description" content="专科 | 计算机科学与技术 | 网络安全">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>热血发言 | Doney</title>
+    <title>前端性能优化 | Doney</title>
 
     <link rel="icon" type="image/jpeg" href="https://s1.ax1x.com/2020/05/17/YR20js.jpg">
 
@@ -466,12 +466,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181018%2F01b1e645c1d44ae7ac16364cbf22d01b.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628905925&t=e32c081bd1c189bec70ea8b9149e2315')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img2.baidu.com/it/u=66965071,296760625&fm=15&fmt=auto&gp=0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">热血发言</h1>
+                    <h1 class="description center-align post-title">前端性能优化</h1>
                 </div>
             </div>
         </div>
@@ -592,8 +592,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/introduce/">
-                                <span class="chip bg-color">introduce</span>
+                            <a href="/tags/Web/">
+                                <span class="chip bg-color">Web</span>
                             </a>
                         
                     </div>
@@ -608,7 +608,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-18
+                    2019-11-16
                 </div>
                 
 
@@ -617,14 +617,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    34
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -642,7 +642,150 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="热爱互联网"><a href="#热爱互联网" class="headerlink" title="热爱互联网"></a>热爱互联网</h2><h2 id="热爱前端"><a href="#热爱前端" class="headerlink" title="热爱前端"></a>热爱前端</h2><h2 id="热爱敲代码"><a href="#热爱敲代码" class="headerlink" title="热爱敲代码"></a>热爱敲代码</h2><h2 id="一包烟一杯茶一个Bug改一天"><a href="#一包烟一杯茶一个Bug改一天" class="headerlink" title="一包烟一杯茶一个Bug改一天"></a>一包烟一杯茶一个Bug改一天</h2><h2 id="我秃了"><a href="#我秃了" class="headerlink" title="我秃了"></a>我秃了</h2><h2 id="但我变强了！"><a href="#但我变强了！" class="headerlink" title="但我变强了！"></a>但我变强了！</h2>
+                <h1 id="前端性能优化："><a href="#前端性能优化：" class="headerlink" title="前端性能优化："></a>前端性能优化：</h1><h2 id="从输入URL到页面加载完成，发生了什么"><a href="#从输入URL到页面加载完成，发生了什么" class="headerlink" title="从输入URL到页面加载完成，发生了什么"></a>从输入URL到页面加载完成，发生了什么</h2>  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">1.</span> ⽤户输⼊www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com
+<span class="token number">2.</span> 浏览器通过<span class="token constant">DNS</span>，把url解析为<span class="token constant">IP</span>
+<span class="token number">3.</span> 和<span class="token constant">IP</span>地址建⽴<span class="token constant">TCP</span>链接 发送<span class="token constant">HTTP</span>请求
+<span class="token number">4.</span> 服务器接收请求，查库，读⽂件等，拼接好返回的<span class="token constant">HTTP</span>响应
+<span class="token number">5.</span> 浏览器收到⾸屏html，开始渲染
+<span class="token number">6.</span> 解析html为dom
+<span class="token number">7.</span> 解析css 为css<span class="token operator">-</span>tree
+<span class="token number">8.</span> dom<span class="token operator">+</span> css ⽣成render<span class="token operator">-</span>tree 绘图
+<span class="token number">9.</span> 加载script的js⽂件
+<span class="token number">10.</span> 执⾏js
+
+<span class="token comment">// DNS 优化</span>
+<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"dns-prefetch"</span> href<span class="token operator">=</span><span class="token string">"dns的地址"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    
+<span class="token comment">// IP TCP HTTP的关系</span>
+<span class="token number">1</span>、<span class="token constant">IP</span>负责找到资源
+<span class="token number">2</span>、<span class="token constant">TCP</span>负责数据的完整性和有序性，三次握手四次挥手
+<span class="token number">3</span>、http应用层，负责应用层数据
+<span class="token comment">// 优化</span>
+<span class="token number">1.</span> ⻓连接
+<span class="token number">2.</span> 减少⽂件体积
+    <span class="token number">1.</span> js打包压缩
+    <span class="token number">2.</span> 图⽚压缩
+	<span class="token number">3.</span> gzip
+<span class="token number">3.</span> 减少⽂件请求次数
+	<span class="token number">1.</span> 雪碧图
+	<span class="token number">2.</span> js，css打包
+	<span class="token number">3.</span> 缓存控制
+	<span class="token number">4.</span> 懒加载
+<span class="token number">4.</span> 减少⽤户和服务器的距离
+	<span class="token number">1.</span> cdn
+<span class="token number">5.</span> 本地存储
+<span class="token number">6.</span> http优化 将验证放在header中
+<span class="token comment">// 通过⽹络获取内容既速度缓慢⼜开销巨⼤。较⼤的响应需要在客户端与服务器之间进⾏多次往返通信，</span>
+<span class="token comment">// 这会延迟浏览器获得和处理内容的时间，还会增加访问者的流量费⽤。因此，缓存并重复利⽤之前获取</span>
+<span class="token comment">// 的资源的能⼒成为性能优化的⼀个关键⽅⾯。</span>
+<span class="token number">7</span>、浏览器缓存
+    <span class="token number">1.</span> Http Cache
+    <span class="token number">2.</span> Service Worker Cache  独立于主线程之外的js<span class="token punctuation">,</span>实现离线缓存和网络代理
+    window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'/xxx.js'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+     <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'注册成功'</span><span class="token punctuation">)</span>
+     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"注册失败"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token number">3.</span> Memory Cache
+    <span class="token number">4.</span> Push Cache
+
+<span class="token comment">// header中设置 强缓存</span>
+expires<span class="token operator">:</span> Wed<span class="token punctuation">,</span> <span class="token number">11</span> Mar <span class="token number">2019</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">18</span> <span class="token constant">GMT</span> 
+cache<span class="token operator">-</span>control<span class="token operator">:</span> max<span class="token operator">-</span>age<span class="token operator">=</span><span class="token number">31536000</span> <span class="token comment">// 1.1 精准 优先级⾼</span>
+<span class="token comment">// 协商缓存 304 not Modified</span>
+<span class="token number">1</span>、第一种方式
+If<span class="token operator">-</span>Modified<span class="token operator">-</span>Since<span class="token operator">:</span> Fri<span class="token punctuation">,</span> <span class="token number">27</span> Oct <span class="token number">2017</span> <span class="token number">06</span><span class="token operator">:</span><span class="token number">35</span><span class="token operator">:</span><span class="token number">57</span> <span class="token constant">GMT</span>
+<span class="token number">2</span>、第二种方式
+ETag<span class="token operator">:</span> <span class="token constant">W</span><span class="token operator">/</span><span class="token string">"2aaa-129892f459"</span> <span class="token comment">// 类似文件的指纹</span>
+If<span class="token operator">-</span>None<span class="token operator">-</span>Match<span class="token operator">:</span> <span class="token constant">W</span><span class="token operator">/</span><span class="token string">"2aaa-129892f459"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="文件打包-webpack"><a href="#文件打包-webpack" class="headerlink" title="文件打包 webpack"></a>文件打包 webpack</h2><h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// performance </span>
+performance<span class="token punctuation">.</span><span class="token function">getEntriesByType</span><span class="token punctuation">(</span><span class="token string">'navigation'</span><span class="token punctuation">)</span>
+<span class="token comment">// lighthouse</span>
+npm install <span class="token operator">-</span>g lighthouse
+lighthouse https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>kaikeba<span class="token punctuation">.</span>com<span class="token operator">/</span> <span class="token operator">--</span>view
+
+<span class="token comment">// 以上两个用于性能监控</span>
+图⽚通常是最占⽤流量的，<span class="token constant">PC</span>端加载的平均图⽚⼤⼩时<span class="token number">600</span>K<span class="token punctuation">.</span>
+不同的场景，使⽤不同的⽂件⾥类型
+<span class="token number">1.</span> jpg
+   <span class="token number">1.</span> 有损压缩
+   <span class="token number">2.</span> 体积⼩ 不⽀持透明
+   <span class="token number">3.</span> ⽤于背景图，轮播图
+
+<span class="token number">2.</span> png
+   <span class="token number">1.</span> ⽆损压缩，质量⾼，⽀持透明
+   <span class="token number">2.</span> ⾊彩线条更丰富，⼩图，⽐如logo，商品icon
+
+<span class="token number">3.</span> svg
+   <span class="token number">1.</span> ⽂本，体积⼩ ⽮量图
+   <span class="token number">2.</span> 渲染成本，学习成本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="gzip-accept-encoding-gzip-开启gzip"><a href="#gzip-accept-encoding-gzip-开启gzip" class="headerlink" title="gzip  accept-encoding:gzip 开启gzip"></a>gzip  accept-encoding:gzip 开启gzip</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token constant">HTTP</span> 压缩就是以缩⼩体积为⽬的，对 <span class="token constant">HTTP</span> 内容进⾏重新编码的过程
+Gzip 压缩背后的原理，是在⼀个⽂本⽂件中找出⼀些重复出现的字符串、临时替换它们，从⽽使整个⽂
+件变⼩。根据这个原理，⽂件中代码的重复率越⾼，那么压缩的效率就越⾼，使⽤ Gzip 的收益也就越
+⼤。
+基本上来说，Gzip都是服务器⼲的活，⽐如nginx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="服务器端渲染-React的Nextjs-Vue的Nuxtjs"><a href="#服务器端渲染-React的Nextjs-Vue的Nuxtjs" class="headerlink" title="服务器端渲染 React的Nextjs  Vue的Nuxtjs"></a>服务器端渲染 React的Nextjs  Vue的Nuxtjs</h2><h2 id="React的长列表加载-React-virtualized"><a href="#React的长列表加载-React-virtualized" class="headerlink" title="React的长列表加载 React-virtualized"></a>React的长列表加载 React-virtualized</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> List <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-virtualized"</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"list"</span><span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>List
+     width<span class="token operator">=</span><span class="token punctuation">{</span>rowWidth<span class="token punctuation">}</span>
+     height<span class="token operator">=</span><span class="token punctuation">{</span>listHeight<span class="token punctuation">}</span>
+     rowHeight<span class="token operator">=</span><span class="token punctuation">{</span>rowHeight<span class="token punctuation">}</span>
+     rowRenderer<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderRow</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+     rowCount<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">.</span>length<span class="token punctuation">}</span> 
+ <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token function">renderRow</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> index<span class="token punctuation">,</span> key<span class="token punctuation">,</span> style <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">return</span> <span class="token punctuation">(</span>
+     <span class="token operator">&lt;</span>div key<span class="token operator">=</span><span class="token punctuation">{</span>key<span class="token punctuation">}</span> style<span class="token operator">=</span><span class="token punctuation">{</span>style<span class="token punctuation">}</span> className<span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"image"</span><span class="token operator">&gt;</span>
+         	<span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>image<span class="token punctuation">}</span> alt<span class="token operator">=</span><span class="token string">""</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">&gt;</span>
+             <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+             <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+ <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="白屏应对"><a href="#白屏应对" class="headerlink" title="白屏应对"></a>白屏应对</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">⻣架，⾃动化⽅案，page<span class="token operator">-</span>skeleton<span class="token operator">-</span>webpack<span class="token operator">-</span>plugin<span class="token punctuation">,</span>
+以及antd的skeleton组件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="移动端点击事件300s的延迟和点击穿透"><a href="#移动端点击事件300s的延迟和点击穿透" class="headerlink" title="移动端点击事件300s的延迟和点击穿透"></a>移动端点击事件300s的延迟和点击穿透</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 移动端浏览器会有一些默认的行为，比如双击缩放、双击滚动。这些行为，尤其是双击缩放，主要是为桌面网站在移动端的浏览体验设计的。而在用户对页面进行操作的时候，移动端浏览器会优先判断用户是否要触发默认的行为。</span>
+
+<span class="token number">1</span>、方案一：禁用缩放
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"user-scalable=no"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"initial-scale=1,maximum-scale=1"</span><span class="token operator">&gt;</span>
+    
+<span class="token number">2</span>、方案二：更改默认的视口宽度
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width"</span><span class="token operator">&gt;</span>
+    
+方案一、二 Chrome支持
+    
+<span class="token number">3</span>、<span class="token constant">CSS</span> touch<span class="token operator">-</span>action<span class="token operator">:</span> none  <span class="token constant">IE</span>支持
+
+
+主要解决方案<span class="token operator">:</span>
+<span class="token comment">// 使用FastClick库</span>
+<span class="token comment">// FastClick的实现原理是在检测到touchend事件的时候，会通过DOM自定义事件立即出发模拟一个click事件，并把浏览器在300ms之后的click事件阻止掉。</span>
+
+<span class="token comment">// 点击穿透</span>
+说完移动端点击<span class="token number">300</span>ms延迟的问题，还不得不提一下移动端点击穿透的问题。可能有人会想，既然click点击有<span class="token number">300</span>ms的延迟，那对于触摸屏，我们直接监听touchstart事件不就好了吗？
+使用touchstart去代替click事件有两个不好的地方。
+第一：touchstart是手指触摸屏幕就触发，有时候用户只是想滑动屏幕，却触发了touchstart事件，这不是我们想要的结果；
+第二：使用touchstart事件在某些场景下可能会出现点击穿透的现象。
+<span class="token comment">// 什么是点击穿透？</span>
+假如页面上有两个元素<span class="token constant">A</span>和<span class="token constant">B</span>。<span class="token constant">B</span>元素在<span class="token constant">A</span>元素之上。我们在<span class="token constant">B</span>元素的touchstart事件上注册了一个回调函数，该回调函数的作用是隐藏<span class="token constant">B</span>元素。我们发现，当我们点击<span class="token constant">B</span>元素，<span class="token constant">B</span>元素被隐藏了，随后，<span class="token constant">A</span>元素触发了click事件。
+
+这是因为在移动端浏览器，事件执行的顺序是touchstart <span class="token operator">&gt;</span> touchend <span class="token operator">&gt;</span> click。而click事件有<span class="token number">300</span>ms的延迟，当touchstart事件把<span class="token constant">B</span>元素隐藏之后，隔了<span class="token number">300</span>ms，浏览器触发了click事件，但是此时<span class="token constant">B</span>元素不见了，所以该事件被派发到了<span class="token constant">A</span>元素身上。如果<span class="token constant">A</span>元素是一个链接，那此时页面就会意外地跳转<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -668,7 +811,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://promisefine.github.io/posts/3714eea.html">https://promisefine.github.io/posts/3714eea.html</a>
+                    <a href="https://promisefine.github.io/posts/604c45ad.html">https://promisefine.github.io/posts/604c45ad.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -706,8 +849,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/introduce/">
-                                    <span class="chip bg-color">introduce</span>
+                                <a href="/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
                                 </a>
                             
                         </div>
@@ -1183,23 +1326,23 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ebdc48ec.html">
+                <a href="/posts/9505ccb9.html">
                     <div class="card-image">
                         
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ouyijy.com%2Fwp-content%2Fuploads%2F2018%2F01%2F9c9a0651ff39fc6e9d5bd5e7725a57da.jpg&refer=http%3A%2F%2Fwww.ouyijy.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628906094&t=6d9ab03025b64d5df7dfd5293dfd053f" class="responsive-img" alt="throttle">
+                        <img src="https://img1.baidu.com/it/u=3737510310,3429350513&fm=26&fmt=auto&gp=0.jpg" class="responsive-img" alt="算法">
                         
-                        <span class="card-title">throttle</span>
+                        <span class="card-title">算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            节流
+                            算法
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-29
                         </span>
                         <span class="publish-author">
                             
@@ -1224,26 +1367,26 @@ new Valine({
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3714eea.html">
+                <a href="/posts/41476be7.html">
                     <div class="card-image">
                         
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181018%2F01b1e645c1d44ae7ac16364cbf22d01b.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628905925&t=e32c081bd1c189bec70ea8b9149e2315" class="responsive-img" alt="热血发言">
+                        <img src="https://img1.baidu.com/it/u=1882474586,611705963&fm=15&fmt=auto&gp=0.jpg" class="responsive-img" alt="Http的缓存机制">
                         
-                        <span class="card-title">热血发言</span>
+                        <span class="card-title">Http的缓存机制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            热血发言
+                            Http的缓存机制
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-20
                             </span>
                         <span class="publish-author">
                             
@@ -1253,12 +1396,11 @@ new Valine({
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/introduce/">
-                        <span class="chip bg-color">introduce</span>
+                    <a href="/tags/Http/">
+                        <span class="chip bg-color">Http</span>
                     </a>
                     
                 </div>
