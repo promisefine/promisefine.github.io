@@ -872,11 +872,11 @@ newArray = oldArray.slice(); //slice会clone返回一个新数组
 
 <hr>
 <h3 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h3><p>在使用Element的时候，官方提供了很多可以自己写render function的地方，但由于Element内部都是用jsx 写render function的，所以demo也都是jsx，但很多人自己项目中其实是没有安装的，导致报错。但说真的用createElement裸写render 函数还是有些蛋疼。我们要用jsx，首先要安装 <a target="_blank" rel="noopener" href="https://github.com/vuejs/babel-plugin-transform-vue-jsx">babel-plugin-transform-vue-jsx</a> 安装方法如下：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install\
-  babel-plugin-syntax-jsx\
-  babel-plugin-transform-vue-jsx\
-  babel-helper-vue-jsx-merge-props\
-  babel-preset-es2015\
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> install<span class="token punctuation">\</span>
+  babel-plugin-syntax-jsx<span class="token punctuation">\</span>
+  babel-plugin-transform-vue-jsx<span class="token punctuation">\</span>
+  babel-helper-vue-jsx-merge-props<span class="token punctuation">\</span>
+  babel-preset-es2015<span class="token punctuation">\</span>
   --save-dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>.babelrc:文件</p>
