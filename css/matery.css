@@ -1794,7 +1794,9 @@ footer .copy-right {
     font-size: 1.6rem;
     color: #333;
 }
-
+#searchModal .search-header .search-input{
+    color:white;
+}
 #searchResult {
     margin: -15px 0 10px 10px;
 }

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://promisefine.github.io/posts/7f74a398.html</loc>
+    
+    <lastmod>2021-07-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://promisefine.github.io/posts/4260555f.html</loc>
     
     <lastmod>2021-07-16</lastmod>
@@ -361,57 +368,71 @@
 
   <url>
     <loc>https://promisefine.github.io/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://promisefine.github.io/tags/Vite/</loc>
+    <lastmod>2021-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://promisefine.github.io/tags/Koa/</loc>
+    <lastmod>2021-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://promisefine.github.io/tags/Javascript/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://promisefine.github.io/tags/Http/</loc>
-    <lastmod>2021-07-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://promisefine.github.io/tags/introduce/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://promisefine.github.io/tags/Linux/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://promisefine.github.io/tags/introduce/</loc>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://promisefine.github.io/tags/Web/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://promisefine.github.io/tags/Vue/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://promisefine.github.io/tags/Webpack/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

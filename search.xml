@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>趣看项目</title>
+      <link href="posts/7f74a398.html"/>
+      <url>posts/7f74a398.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Vite </tag>
+            
+            <tag> Koa </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue项目架构搭建-4</title>
       <link href="posts/4260555f.html"/>
       <url>posts/4260555f.html</url>
