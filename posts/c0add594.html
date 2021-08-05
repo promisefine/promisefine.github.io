@@ -617,14 +617,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    6 分
                 </div>
                 
 
@@ -642,12 +642,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="架构图以及vue的简介"><a href="#架构图以及vue的简介" class="headerlink" title="[架构图以及vue的简介]"></a>[架构图以及vue的简介]</h1><h2 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a><strong>架构图</strong></h2><h3 id="前后端分离总架构图"><a href="#前后端分离总架构图" class="headerlink" title="前后端分离总架构图"></a><strong>前后端分离总架构图</strong></h3><p> <img src="https://img2018.cnblogs.com/blog/1416523/201904/1416523-20190430162150330-384350168.png" alt="img"></p>
-<h3 id="前端架构设计图"><a href="#前端架构设计图" class="headerlink" title="前端架构设计图"></a><strong>前端架构设计图</strong></h3><p> <img src="https://img2018.cnblogs.com/blog/1416523/201904/1416523-20190430162200897-1163950829.png" alt="img"></p>
-<h2 id="MVVM-架构模式"><a href="#MVVM-架构模式" class="headerlink" title="MVVM 架构模式"></a><strong>MVVM</strong> <strong>架构模式</strong></h2><h3 id="MVVM-的简介"><a href="#MVVM-的简介" class="headerlink" title="MVVM 的简介"></a><strong>MVVM</strong> <strong>的简介</strong></h3><p>MVVM 由 Model,View,ViewModel 三部分构成，Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。</p>
+                <h1 id="vue的简介"><a href="#vue的简介" class="headerlink" title="[vue的简介]"></a>[vue的简介]</h1><h2 id="MVVM-架构模式"><a href="#MVVM-架构模式" class="headerlink" title="MVVM 架构模式"></a><strong>MVVM</strong> <strong>架构模式</strong></h2><h3 id="MVVM-的简介"><a href="#MVVM-的简介" class="headerlink" title="MVVM 的简介"></a><strong>MVVM</strong> <strong>的简介</strong></h3><p>MVVM 由 Model,View,ViewModel 三部分构成，Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。</p>
 <p>在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View 上。</p>
 <p>ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。</p>
-<h3 id="MVVM-模式图"><a href="#MVVM-模式图" class="headerlink" title="MVVM 模式图"></a><strong>MVVM</strong> <strong>模式图</strong></h3><p> <img src="https://img2018.cnblogs.com/blog/1416523/201904/1416523-20190430162210999-591085485.jpg" alt="img"></p>
 <h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a><strong>vue</strong></h2><h3 id="1-学习-vue-的前提"><a href="#1-学习-vue-的前提" class="headerlink" title="1.  学习 vue 的前提"></a><strong>1.</strong>  <strong>学习</strong> <strong>vue</strong> <strong>的前提</strong></h3><ul>
 <li>你只需要了解关于 HTML、CSS 和 JavaScript 的中级知识，就能进行开发。</li>
 <li>vue用于构建用户界面的<strong>渐进式框架</strong>，渐进式代表的含义是：主张最少。每个框架都不可避免会有自己的一些特点，从而会对使用者有一定的要求，这些要求就是主张，主张有强有弱，它的强势程度会影响在业务开发中的使用方式。</li>
@@ -657,7 +654,6 @@
 <h3 id="2-vue-的简单介绍"><a href="#2-vue-的简单介绍" class="headerlink" title="2.  vue 的简单介绍"></a><strong>2.</strong>  <strong>vue</strong> <strong>的简单介绍</strong></h3><p>Vue.js 可以说是MVVM 架构的最佳实践，是一个JavaScriptMVVM库，是一套构建用户界面的渐进式框架。专注于 MVVM 中的 ViewModel，不仅做到了数据双向绑定，而且也是一款相对比较轻量级的JS 库，API 简洁</p>
 <h3 id="3-vue-热加载"><a href="#3-vue-热加载" class="headerlink" title="3.  vue 热加载"></a><strong>3.</strong>  <strong>vue</strong> <strong>热加载</strong></h3><p>因为vue的双向数据绑定特性以及技术的成形，实现了项目的热加载，改完页面代码能立即在浏览器方面显示效果，提高开发效率</p>
 <h3 id="4-vue-的双向数据绑定的原理"><a href="#4-vue-的双向数据绑定的原理" class="headerlink" title="4.  vue 的双向数据绑定的原理"></a><strong>4.</strong>  <strong>vue</strong> <strong>的双向数据绑定的原理</strong></h3><p>Vue.js 是采用 Object.defineProperty 的 getter 和 setter，并结合观察者模式来实现数据绑定的。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。</p>
-<p> <img src="https://img2018.cnblogs.com/blog/1416523/201904/1416523-20190430162235499-481742554.png" alt="img"></p>
 <p><strong>Observer</strong> 数据监听器，能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者，内部采用Object.defineProperty的getter和setter来实现。</p>
 <p><strong>Compile</strong> 指令解析器，它的作用对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数。</p>
 <p><strong>Watcher</strong> 订阅者， 作为连接 Observer 和 Compile 的桥梁，能够订阅并收到每个属性变动的通知，执行指令绑定的相应回调函数。</p>
@@ -733,12 +729,6 @@ npm run dev
 # 启动完成我们就能在，提示的地址中，浏览或开发项目（例如地址为：http://127.0.0.1:9528）
 http://127.0.0.1:9528<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-
-
-<h3 id="url-到页面显示的过程"><a href="#url-到页面显示的过程" class="headerlink" title="url**到页面显示的过程**"></a><strong>url**</strong>到页面显示的过程**</h3><p> <img src="https://img2018.cnblogs.com/blog/1416523/201905/1416523-20190504220927760-1924551379.png" alt="img"></p>
-<h3 id="浏览器端显示HTML的过程"><a href="#浏览器端显示HTML的过程" class="headerlink" title="浏览器端显示HTML的过程"></a>浏览器端显示HTML的过程</h3><p><img src="https://img2018.cnblogs.com/blog/1416523/201905/1416523-20190504221009508-1904143283.png" alt="img"></p>
 
                 
             </div>
